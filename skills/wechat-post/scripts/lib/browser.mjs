@@ -13,12 +13,20 @@ function findChrome() {
     'C:/Program Files/Google/Chrome/Application/chrome.exe',
     'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
     `${process.env.LOCALAPPDATA || ''}/Google/Chrome/Application/chrome.exe`,
+    // Linux 服务器:playwright 管理的 chromium(默认项目环境实测可用)
+    `${process.env.HOME || ''}/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome`,
   ].filter(Boolean);
   for (const p of candidates) {
     if (existsSync(p)) return p;
   }
   throw new Error('未找到 Chrome,请安装 Chrome 或设置环境变量 WECHAT_CHROME_PATH 指向 chrome.exe');
 }
+
+// Linux 无头服务器:chromium 必须 --no-sandbox(否则 core dump),且无显示器走 headless
+const isLinuxServer = process.platform === 'linux' && !process.env.DISPLAY;
+const linuxFlags = isLinuxServer
+  ? ['--headless=new', '--no-sandbox', '--disable-dev-shm-usage']
+  : [];
 
 export async function ensureBrowser(profileDir) {
   const endpoint = `http://127.0.0.1:${CDP_PORT}`;
@@ -31,7 +39,9 @@ export async function ensureBrowser(profileDir) {
     spawn(findChrome(), [
       `--remote-debugging-port=${CDP_PORT}`,
       `--user-data-dir=${profileDir}`,
-      '--no-first-run', '--no-default-browser-check', '--start-maximized',
+      ...linuxFlags,
+      '--no-first-run', '--no-default-browser-check',
+      ...(isLinuxServer ? [] : ['--start-maximized']),
       'https://mp.weixin.qq.com/',
     ], { detached: true, stdio: 'ignore' }).unref();
     for (let i = 0; i < 30; i++) {
