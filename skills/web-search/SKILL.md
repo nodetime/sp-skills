@@ -1,6 +1,11 @@
 ---
 name: "web-search"
 description: "需要搜索互联网获取信息时用我:通用网页/新闻搜索,可选把命中页面的正文(markdown)一并带回,适合查资料、对热点事件深挖详情、收集报告素材。关键词:搜索、上网、查资料、网页搜索、新闻搜索、互联网、search、检索、深挖、详情。"
+version: "1.0.0"
+display_name: "网页与新闻搜索"
+display_name_en: "Web and News Search"
+description_zh: "搜索公开网页和新闻，按需返回命中页面的 Markdown 正文，便于查资料、追踪事件和收集报告素材。"
+description_en: "Search public web pages and news, with optional page content in Markdown for research and reporting."
 ---
 
 # 通用网页搜索

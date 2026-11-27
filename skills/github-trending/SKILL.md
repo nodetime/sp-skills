@@ -1,6 +1,11 @@
 ---
 name: "github-trending"
 description: "需要了解 GitHub 上最近热门/新兴的开源项目时用我:按近 N 天新建仓库的 star 数排序取热门榜,可按编程语言过滤。适合日报/周报里的开源热点盘点。关键词:GitHub、trending、热门项目、开源、新项目、star、涨星、技术热点、开源日报。"
+version: "1.0.0"
+display_name: "GitHub 热门开源项目"
+display_name_en: "Popular New GitHub Repositories"
+description_zh: "按星标数为指定天数内新建的 GitHub 开源仓库排名，支持按编程语言筛选。"
+description_en: "Rank open-source GitHub repositories created within a chosen time window by star count, with an optional language filter."
 ---
 
 # GitHub 热门项目采集

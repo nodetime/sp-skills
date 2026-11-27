@@ -1,6 +1,11 @@
 ---
 name: "landray-log"
 description: "当需要排查蓝凌某环境(mkdev01、mksmoke 等)的服务端问题时用我:按 traceId 追踪一次请求、定位报错/超时、或查看某个服务的日志。关键词:traceId、日志、排查、报错、超时、蓝凌、landray。"
+version: "1.0.0"
+display_name: "蓝凌服务端日志排查"
+display_name_en: "Landray Server Log Diagnostics"
+description_zh: "在已配置的蓝凌环境中按 traceId 或关键词检索服务端日志，跨服务追踪请求并排查报错和超时。"
+description_en: "Search server logs by trace ID or keyword in configured Landray environments to trace requests and investigate errors and timeouts across services."
 ---
 
 # 蓝凌日志排查

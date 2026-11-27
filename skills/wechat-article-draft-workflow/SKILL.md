@@ -1,9 +1,14 @@
 ---
-name: wechat-post
+name: wechat-article-draft-workflow
 description: 公众号文章一条龙流水线:选题 -> 成稿 -> 配图 -> 排版 -> 存入草稿箱。当用户给出选题要写公众号文章、要发公众号、要把现成 HTML 存草稿、或走任意一段发文流程时使用。终点是草稿箱,群发永远人工。
+version: "1.0.0"
+display_name: "微信公众号文章草稿工作流"
+display_name_en: "WeChat Official Account Draft Workflow"
+description_zh: "为微信公众号文章撰稿、配图、排版，并将成品保存到草稿箱。最终发布由人工完成。"
+description_en: "Write, illustrate, and format articles for WeChat Official Accounts, then save them as drafts. Final publication is manual."
 ---
 
-# wechat-post:公众号发文流水线
+# wechat-article-draft-workflow:公众号发文流水线
 
 从一个选题走到公众号草稿箱的完整流程。每步有产物、有验收,整条链已实战跑通(2026-08-17 首篇上线)。
 
@@ -48,7 +53,7 @@ description: 公众号文章一条龙流水线:选题 -> 成稿 -> 配图 -> 排
 - 截图用本 skill 脚本,对 body 做元素级截图,尺寸精确:
 
 ```bash
-node .claude/skills/wechat-post/scripts/shoot-figures.mjs "articles/assets/<YYYYMMDD-slug>"
+node .claude/skills/wechat-article-draft-workflow/scripts/shoot-figures.mjs "articles/assets/<YYYYMMDD-slug>"
 ```
 
 验收:PNG 尺寸正确(脚本会打印),逐张目检文字无溢出、无错字。
@@ -56,7 +61,7 @@ node .claude/skills/wechat-post/scripts/shoot-figures.mjs "articles/assets/<YYYY
 ## 第 3 步:排版
 
 ```bash
-node .claude/skills/wechat-post/scripts/md2wechat-html.mjs "articles/YYYYMMDD_题目_公众号文章.md"
+node .claude/skills/wechat-article-draft-workflow/scripts/md2wechat-html.mjs "articles/YYYYMMDD_题目_公众号文章.md"
 ```
 
 生成 6 种风格的微信粘贴兼容 HTML + 总览页。规则细节(双标题消除、行内样式展开、图片占位块)已内置在脚本里。科技观点文优先推 minimal / wired,长文随笔推 medium。
@@ -70,7 +75,7 @@ node .claude/skills/wechat-post/scripts/md2wechat-html.mjs "articles/YYYYMMDD_�
 ## 第 5 步:存草稿
 
 ```bash
-node .claude/skills/wechat-post/scripts/publish-draft.mjs \
+node .claude/skills/wechat-article-draft-workflow/scripts/publish-draft.mjs \
   --html "articles/公众号HTML输出/<选定风格>.html" --author "作者名" \
   --assets-dir "articles/assets/<YYYYMMDD-slug>"
 ```

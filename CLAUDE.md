@@ -36,7 +36,7 @@ sp-skills 是一个 Claude Code skill 集(sp = superpower 的精简,代表个人
 **本仓库是 skill 的唯一源**(2026-09-20 合并完成)。所有 skill 只在这里开发、只在这里改,不存在"私有仓开发 + 拷贝副本到公开仓"那套流程 —— 那套双份维护已废弃。
 
 - 上游:无。前身私有仓 landary_work_e 已退役删除,不存在"从别处同步"这回事。它仅有的非 skill 独有内容(一份 121 行通用编码准则)存于本机 `_archive_landary_work_e/`。
-- 真实配置(`config/environments.yaml`、`config/secrets.yaml`)与 wechat-post 的 `.profile` 登录态都在本机各 skill 目录下,被 `.gitignore` 拦住,不入库。换机器要手工带,别指望 clone 就能用。
+- 真实配置(`config/environments.yaml`、`config/secrets.yaml`)与 wechat-article-draft-workflow 的 `.profile` 登录态都在本机各 skill 目录下,被 `.gitignore` 拦住,不入库。换机器要手工带,别指望 clone 就能用。
 - 下游(分发,两条,别再加第三条):
   - 对外 —— `npx skills add <owner>/sp-skills`,GitHub 仓库即目录。
   - 对内 —— 打 zip 上传团队 skill-hub(l-skill-hup 项目),供内网同事安装。

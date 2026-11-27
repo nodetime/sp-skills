@@ -4,7 +4,7 @@
 import { chromium } from 'playwright-core';
 
 const CDP = 'http://127.0.0.1:9223';
-const SHOT_DIR = '.claude/skills/wechat-post/publish-logs';
+const SHOT_DIR = '.claude/skills/wechat-article-draft-workflow/publish-logs';
 
 const browser = await chromium.connectOverCDP(CDP);
 const context = browser.contexts()[0];

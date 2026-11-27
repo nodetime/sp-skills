@@ -1,6 +1,11 @@
 ---
 name: "market-analyzer"
 description: "需要只读查询或分析股票/基金/黄金行情时用我:查 A股/港股/美股/场内ETF 的实时报价、历史K线,算 MA/RSI/MACD/KDJ 技术指标,出信号面板(客观统计+指标状态),看上海黄金交易所金价,并可生成自包含 HTML 走势报告。只读取数与本地分析,不含任何交易/下单能力,不预测涨跌、不荐股。关键词:股票、行情、报价、K线、技术指标、MACD、KDJ、均线、A股、港股、美股、基金、ETF、黄金、上海黄金交易所、Au99.99、信号面板、最大回撤、波动率、多只对比、走势、投资分析。"
+version: "1.0.0"
+display_name: "股票、ETF 与黄金行情分析"
+display_name_en: "Stock, ETF, and Gold Market Analyzer"
+description_zh: "查询股票和 ETF 报价、历史 K 线及上海黄金交易所金价，计算技术指标并生成走势报告。不交易、不预测、不荐股。"
+description_en: "Look up stock and ETF quotes, historical charts, and Shanghai Gold Exchange prices. Calculate technical indicators and generate reports without placing trades, forecasting prices, or recommending investments."
 ---
 
 # 股票/基金行情只读分析

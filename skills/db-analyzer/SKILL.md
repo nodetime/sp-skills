@@ -1,6 +1,11 @@
 ---
 name: "db-analyzer"
 description: "需要只读查询或分析 MySQL/PostgreSQL/Oracle/SQLite 数据库时用我:探查库表结构、看建表语句、执行只读 SQL 做数据分析。不提供任何写能力,不能用于建表/改表/增删改数据。关键词:数据库、查询、SQL、建表语句、DDL、表结构、MySQL、Oracle、PostgreSQL、Postgres、SQLite。"
+version: "1.0.0"
+display_name: "数据库只读查询与分析"
+display_name_en: "Read-Only Database Analyzer"
+description_zh: "查看 MySQL、PostgreSQL、Oracle 和 SQLite 的库表结构与建表语句，并执行只读 SQL 查询。"
+description_en: "Inspect database schemas and table definitions, and run read-only SQL queries on MySQL, PostgreSQL, Oracle, and SQLite."
 ---
 
 # 数据库只读查询与分析

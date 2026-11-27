@@ -1,6 +1,11 @@
 ---
 name: "cn-hotspot"
 description: "需要了解国内当下的时政/社会热点时用我:拉取百度热搜榜(实时热点榜单),给出榜单标题与链接,适合日报里的时事热点盘点。关键词:时政、热点、热搜、新闻、时事、百度热搜、今日热点、国内新闻、社会热点、日报。"
+version: "1.0.0"
+display_name: "国内时政与社会热点"
+display_name_en: "China News Trends"
+description_zh: "从百度热搜实时榜获取国内时政和社会热点的标题与链接，适合整理时事简报。"
+description_en: "Fetch headlines and links for trending political and social news in China from Baidu's live rankings."
 ---
 
 # 国内时政/社会热点采集

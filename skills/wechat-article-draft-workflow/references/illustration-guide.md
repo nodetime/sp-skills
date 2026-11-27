@@ -30,7 +30,7 @@
 3. 批量截图:
 
 ```bash
-node .claude/skills/wechat-post/scripts/shoot-figures.mjs "articles/assets/<YYYYMMDD-slug>"
+node .claude/skills/wechat-article-draft-workflow/scripts/shoot-figures.mjs "articles/assets/<YYYYMMDD-slug>"
 ```
 
 脚本对每个 HTML 的 body 做元素级截图(尺寸精确,不带视口空白),输出同名 PNG 并打印尺寸。
